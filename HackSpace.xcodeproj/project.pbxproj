@@ -13,6 +13,7 @@
 		76487A50221DEB87000361F1 /* HackSpace.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76487A4E221DEB87000361F1 /* HackSpace.xcdatamodeld */; };
 		76487A52221DEB88000361F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76487A51221DEB88000361F1 /* Assets.xcassets */; };
 		76487A55221DEB88000361F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76487A53221DEB88000361F1 /* LaunchScreen.storyboard */; };
+		76487A7E221DF972000361F1 /* MenuHacksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76487A7D221DF972000361F1 /* MenuHacksCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		76487A51221DEB88000361F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76487A54221DEB88000361F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76487A56221DEB88000361F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76487A7D221DF972000361F1 /* MenuHacksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHacksCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				76487A53221DEB88000361F1 /* LaunchScreen.storyboard */,
 				76487A56221DEB88000361F1 /* Info.plist */,
 				76487A4E221DEB87000361F1 /* HackSpace.xcdatamodeld */,
+				76487A7D221DF972000361F1 /* MenuHacksCell.swift */,
 			);
 			path = HackSpace;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76487A4A221DEB87000361F1 /* ViewController.swift in Sources */,
+				76487A7E221DF972000361F1 /* MenuHacksCell.swift in Sources */,
 				76487A48221DEB87000361F1 /* AppDelegate.swift in Sources */,
 				76487A50221DEB87000361F1 /* HackSpace.xcdatamodeld in Sources */,
 			);
