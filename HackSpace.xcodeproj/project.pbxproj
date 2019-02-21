@@ -14,6 +14,11 @@
 		76487A52221DEB88000361F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76487A51221DEB88000361F1 /* Assets.xcassets */; };
 		76487A55221DEB88000361F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76487A53221DEB88000361F1 /* LaunchScreen.storyboard */; };
 		76487A7E221DF972000361F1 /* MenuHacksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76487A7D221DF972000361F1 /* MenuHacksCell.swift */; };
+		76487A81221F3521000361F1 /* Hackathon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76487A80221F3521000361F1 /* Hackathon.swift */; };
+		76487A84221F3A54000361F1 /* hackimage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 76487A83221F3A54000361F1 /* hackimage.jpg */; };
+		76487A86221F3F28000361F1 /* Заметки in Resources */ = {isa = PBXBuildFile; fileRef = 76487A85221F3F28000361F1 /* Заметки */; };
+		76487A88221F4119000361F1 /* hamb.png in Resources */ = {isa = PBXBuildFile; fileRef = 76487A87221F4119000361F1 /* hamb.png */; };
+		76487A8A221F42C4000361F1 /* hamb1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 76487A89221F42C4000361F1 /* hamb1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		76487A54221DEB88000361F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76487A56221DEB88000361F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76487A7D221DF972000361F1 /* MenuHacksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHacksCell.swift; sourceTree = "<group>"; };
+		76487A80221F3521000361F1 /* Hackathon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hackathon.swift; sourceTree = "<group>"; };
+		76487A83221F3A54000361F1 /* hackimage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hackimage.jpg; sourceTree = "<group>"; };
+		76487A85221F3F28000361F1 /* Заметки */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Заметки"; sourceTree = "<group>"; };
+		76487A87221F4119000361F1 /* hamb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hamb.png; sourceTree = "<group>"; };
+		76487A89221F42C4000361F1 /* hamb1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hamb1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,8 @@
 		76487A46221DEB87000361F1 /* HackSpace */ = {
 			isa = PBXGroup;
 			children = (
+				76487A82221F3A38000361F1 /* Images */,
+				76487A7F221F34CD000361F1 /* Data */,
 				76487A47221DEB87000361F1 /* AppDelegate.swift */,
 				76487A49221DEB87000361F1 /* ViewController.swift */,
 				76487A4B221DEB87000361F1 /* Main.storyboard */,
@@ -66,8 +78,27 @@
 				76487A56221DEB88000361F1 /* Info.plist */,
 				76487A4E221DEB87000361F1 /* HackSpace.xcdatamodeld */,
 				76487A7D221DF972000361F1 /* MenuHacksCell.swift */,
+				76487A85221F3F28000361F1 /* Заметки */,
 			);
 			path = HackSpace;
+			sourceTree = "<group>";
+		};
+		76487A7F221F34CD000361F1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				76487A80221F3521000361F1 /* Hackathon.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		76487A82221F3A38000361F1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				76487A87221F4119000361F1 /* hamb.png */,
+				76487A89221F42C4000361F1 /* hamb1.jpg */,
+				76487A83221F3A54000361F1 /* hackimage.jpg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +161,11 @@
 			files = (
 				76487A55221DEB88000361F1 /* LaunchScreen.storyboard in Resources */,
 				76487A52221DEB88000361F1 /* Assets.xcassets in Resources */,
+				76487A84221F3A54000361F1 /* hackimage.jpg in Resources */,
 				76487A4D221DEB87000361F1 /* Main.storyboard in Resources */,
+				76487A8A221F42C4000361F1 /* hamb1.jpg in Resources */,
+				76487A86221F3F28000361F1 /* Заметки in Resources */,
+				76487A88221F4119000361F1 /* hamb.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +178,7 @@
 			files = (
 				76487A4A221DEB87000361F1 /* ViewController.swift in Sources */,
 				76487A7E221DF972000361F1 /* MenuHacksCell.swift in Sources */,
+				76487A81221F3521000361F1 /* Hackathon.swift in Sources */,
 				76487A48221DEB87000361F1 /* AppDelegate.swift in Sources */,
 				76487A50221DEB87000361F1 /* HackSpace.xcdatamodeld in Sources */,
 			);
