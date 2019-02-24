@@ -51,12 +51,12 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         tableView.dataSource = self;
         //tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 80
-        let h = Hackathon(date: dateObj! , title: "HackSpace", description: "The Best Hackathon")
+        /*let h = Hackathon(date: dateObj! , title: "HackSpace", description: "The Best Hackathon")
         hackathones.add(h)
         hackathones.add(h)
         hackathones.add(h)
         hackathones.add(h)
-        hackathones.add(h)
+        hackathones.add(h)*/
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
