@@ -19,6 +19,7 @@
 		76487A86221F3F28000361F1 /* Заметки in Resources */ = {isa = PBXBuildFile; fileRef = 76487A85221F3F28000361F1 /* Заметки */; };
 		76487A88221F4119000361F1 /* hamb.png in Resources */ = {isa = PBXBuildFile; fileRef = 76487A87221F4119000361F1 /* hamb.png */; };
 		76487A8A221F42C4000361F1 /* hamb1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 76487A89221F42C4000361F1 /* hamb1.jpg */; };
+		764E5F3F222B2F71002A3A00 /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764E5F3E222B2F71002A3A00 /* Organization.swift */; };
 		76FA85962222D5AE008EB1E2 /* HackInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA85952222D5AE008EB1E2 /* HackInfoController.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		76487A85221F3F28000361F1 /* Заметки */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Заметки"; sourceTree = "<group>"; };
 		76487A87221F4119000361F1 /* hamb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hamb.png; sourceTree = "<group>"; };
 		76487A89221F42C4000361F1 /* hamb1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hamb1.jpg; sourceTree = "<group>"; };
+		764E5F3E222B2F71002A3A00 /* Organization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		76FA85952222D5AE008EB1E2 /* HackInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackInfoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				76487A80221F3521000361F1 /* Hackathon.swift */,
+				764E5F3E222B2F71002A3A00 /* Organization.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				76487A4A221DEB87000361F1 /* ViewController.swift in Sources */,
 				76487A7E221DF972000361F1 /* MenuHacksCell.swift in Sources */,
 				76487A81221F3521000361F1 /* Hackathon.swift in Sources */,
+				764E5F3F222B2F71002A3A00 /* Organization.swift in Sources */,
 				76487A48221DEB87000361F1 /* AppDelegate.swift in Sources */,
 				76487A50221DEB87000361F1 /* HackSpace.xcdatamodeld in Sources */,
 			);

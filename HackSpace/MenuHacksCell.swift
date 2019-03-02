@@ -14,6 +14,7 @@ class MenuHacksCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
 
     @IBOutlet var labelTitle: UILabel!
     
@@ -27,5 +28,7 @@ class MenuHacksCell: UITableViewCell {
    
     @IBAction func applyClick(_ sender: Any) {
     }
+    
+   
     
 }
