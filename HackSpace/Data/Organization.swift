@@ -7,10 +7,10 @@
 //
 
 import Foundation
-class Organization {
+class Organization:Decodable {
     public var id: Int
     public var title:String
-    public var website:String
+    public var website:String?
     
     init(id: Int, title: String,website: String) {
         self.id = id
