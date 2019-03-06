@@ -27,9 +27,11 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         let hack = hackathones[indexPath.row]
         //let dateObj = dateFormatter.date(from: (hack?.date as? Date)!)
         dateFormatter.dateFormat = "MM-dd-yyyy HH:mm"
-        cell.labelDate.text = hack.dateStart
+        cell.labelDate.text = String((hack.dateStart?.prefix(10))!)
+       
         cell.labelTitle.text = hack.title
-        cell.imageViewHack.image = UIImage(data: images[indexPath.row] as! Data);
+        if images.count>0{
+            cell.imageViewHack.image = UIImage(data: images[indexPath.row] as! Data);}
         return cell
         
         
@@ -52,6 +54,15 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         tableView.delegate = self
         tableView.dataSource = self;
         tableView.estimatedRowHeight = 80
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        imageView.contentMode = .scaleAspectFit
+        
+        // 4
+        let image = UIImage(named: "hamb.png")
+        imageView.image = image
+        
+        // 5
+        
         super.viewDidLoad()
     }
 
@@ -80,6 +91,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
                 print("success")
                 do{
                     self.hackathones = try JSONDecoder().decode([Hackathon].self, from: data!)
+                    DispatchQueue.main.async {self.tableView.reloadData()}
                     for i in 0...self.hackathones.count-1 {
                         if self.hackathones[i].preview == nil {
                             let url = URL(string: "https://get.wallhere.com/photo/digital-art-blue-technology-circle-lens-flare-laser-light-shape-line-screenshot-computer-wallpaper-atmosphere-of-earth-229495.jpg")
@@ -119,6 +131,19 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
              
              task.resume()
         }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "hackInfoSegue", sender:indexPath.row)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "hackInfoSegue",let destination = segue.destination as? HackInfoController {
+            if let index = sender as? Int {
+                destination.hack = hackathones[index]
+                destination.image = UIImage(data: images[index] as! Data)!;
+            }
+            
+            
+        }
+    }
     
 }
 

@@ -14,7 +14,7 @@ class Hackathon:Decodable {
     public var id: Int
     public var title:String
     public var submissionDue: String?
-   // public var description: String
+    //public var description: String?
     public var city:String?
     public var dateStart:String?
     public var dateEnd:String?

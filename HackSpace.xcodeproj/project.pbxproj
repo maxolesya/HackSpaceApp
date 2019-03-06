@@ -72,10 +72,10 @@
 		76487A46221DEB87000361F1 /* HackSpace */ = {
 			isa = PBXGroup;
 			children = (
+				76A15821222E99E500A375DB /* Controllers */,
 				76487A82221F3A38000361F1 /* Images */,
 				76487A7F221F34CD000361F1 /* Data */,
 				76487A47221DEB87000361F1 /* AppDelegate.swift */,
-				76487A49221DEB87000361F1 /* ViewController.swift */,
 				76487A4B221DEB87000361F1 /* Main.storyboard */,
 				76487A51221DEB88000361F1 /* Assets.xcassets */,
 				76487A53221DEB88000361F1 /* LaunchScreen.storyboard */,
@@ -83,7 +83,6 @@
 				76487A4E221DEB87000361F1 /* HackSpace.xcdatamodeld */,
 				76487A7D221DF972000361F1 /* MenuHacksCell.swift */,
 				76487A85221F3F28000361F1 /* Заметки */,
-				76FA85952222D5AE008EB1E2 /* HackInfoController.swift */,
 			);
 			path = HackSpace;
 			sourceTree = "<group>";
@@ -105,6 +104,15 @@
 				76487A83221F3A54000361F1 /* hackimage.jpg */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		76A15821222E99E500A375DB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				76487A49221DEB87000361F1 /* ViewController.swift */,
+				76FA85952222D5AE008EB1E2 /* HackInfoController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
