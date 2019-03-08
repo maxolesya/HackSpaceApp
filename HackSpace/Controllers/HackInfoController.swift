@@ -8,7 +8,11 @@
 
 import UIKit
 
-class HackInfoController: UIViewController {
+class HackInfoController: UIViewController, UITableViewDataSource,UITableViewDelegate
+{
+   
+    
+    @IBOutlet var tableView: UITableView!
     var hack:Hackathon?
     @IBOutlet var hackImageView: UIImageView!
     var image = UIImage();
@@ -33,6 +37,17 @@ class HackInfoController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "challengeCell", for: indexPath) as! ChallengeCell
+        
+     
+        return cell
+    }
+    
     func get_info(url:String)  {
         var request = URLRequest(url: NSURL(string: url)! as URL)
         request.httpMethod = "GET"

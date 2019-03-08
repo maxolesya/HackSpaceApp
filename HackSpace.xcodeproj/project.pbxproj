@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		760658622232AAAF00BE393A /* ChallengeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760658612232AAAF00BE393A /* ChallengeCell.swift */; };
+		76376BEB222FDB5600002BCF /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76376BEA222FDB5600002BCF /* AuthController.swift */; };
+		76376BED222FE5D300002BCF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76376BEC222FE5D300002BCF /* RegisterViewController.swift */; };
 		76487A48221DEB87000361F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76487A47221DEB87000361F1 /* AppDelegate.swift */; };
 		76487A4A221DEB87000361F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76487A49221DEB87000361F1 /* ViewController.swift */; };
 		76487A4D221DEB87000361F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76487A4B221DEB87000361F1 /* Main.storyboard */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		760658612232AAAF00BE393A /* ChallengeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeCell.swift; sourceTree = "<group>"; };
+		76376BEA222FDB5600002BCF /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
+		76376BEC222FE5D300002BCF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		76487A44221DEB87000361F1 /* HackSpace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackSpace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76487A47221DEB87000361F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76487A49221DEB87000361F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +59,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		760658602232AA9400BE393A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				76487A7D221DF972000361F1 /* MenuHacksCell.swift */,
+				760658612232AAAF00BE393A /* ChallengeCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		76487A3B221DEB87000361F1 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +87,7 @@
 		76487A46221DEB87000361F1 /* HackSpace */ = {
 			isa = PBXGroup;
 			children = (
+				760658602232AA9400BE393A /* Cells */,
 				76A15821222E99E500A375DB /* Controllers */,
 				76487A82221F3A38000361F1 /* Images */,
 				76487A7F221F34CD000361F1 /* Data */,
@@ -81,7 +97,6 @@
 				76487A53221DEB88000361F1 /* LaunchScreen.storyboard */,
 				76487A56221DEB88000361F1 /* Info.plist */,
 				76487A4E221DEB87000361F1 /* HackSpace.xcdatamodeld */,
-				76487A7D221DF972000361F1 /* MenuHacksCell.swift */,
 				76487A85221F3F28000361F1 /* Заметки */,
 			);
 			path = HackSpace;
@@ -111,6 +126,8 @@
 			children = (
 				76487A49221DEB87000361F1 /* ViewController.swift */,
 				76FA85952222D5AE008EB1E2 /* HackInfoController.swift */,
+				76376BEA222FDB5600002BCF /* AuthController.swift */,
+				76376BEC222FE5D300002BCF /* RegisterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -190,11 +207,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76376BED222FE5D300002BCF /* RegisterViewController.swift in Sources */,
 				76FA85962222D5AE008EB1E2 /* HackInfoController.swift in Sources */,
 				76487A4A221DEB87000361F1 /* ViewController.swift in Sources */,
 				76487A7E221DF972000361F1 /* MenuHacksCell.swift in Sources */,
 				76487A81221F3521000361F1 /* Hackathon.swift in Sources */,
+				760658622232AAAF00BE393A /* ChallengeCell.swift in Sources */,
 				764E5F3F222B2F71002A3A00 /* Organization.swift in Sources */,
+				76376BEB222FDB5600002BCF /* AuthController.swift in Sources */,
 				76487A48221DEB87000361F1 /* AppDelegate.swift in Sources */,
 				76487A50221DEB87000361F1 /* HackSpace.xcdatamodeld in Sources */,
 			);

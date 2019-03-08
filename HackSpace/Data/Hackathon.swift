@@ -55,13 +55,11 @@ class Hackathon:Decodable {
         
     }
 }
-/*class EventType {
-    public var type:String
-    enum {
-        
-        case Winter
-        case Spring
-        case Summer
-        case Autumn
+class Schedule:Decodable  {
+    public var description:String?
+    public var time:String?
+    init(description:String,time:String) {
+        self.description = description
+        self.time = time
     }
-}*/
+}
