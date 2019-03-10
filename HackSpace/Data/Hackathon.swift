@@ -21,7 +21,7 @@ class Hackathon:Decodable {
     public var link:String?
     public var eventType:String?
     public var preview:String?
-    public var schedule:String?
+   
    /* public enum status{
         
         case open
@@ -36,7 +36,7 @@ class Hackathon:Decodable {
     public var isSearchable:Bool?
     public var organization: Organization
     
-    init(title: String,/*description: String,*/link: String,dateEnd: String,dateStart: String,city: String,preview:String,organization: Organization, schedule:String,
+    init(title: String,/*description: String,*/link: String,dateEnd: String,dateStart: String,city: String,preview:String,organization: Organization,
          eventType:String,id:Int,status:String, isSearchable:Bool,submissionDue: String) {
         self.title = title
        self.id = id
@@ -49,10 +49,58 @@ class Hackathon:Decodable {
         self.preview=preview
         self.isSearchable = isSearchable
         self.submissionDue = submissionDue
-        self.schedule = schedule
+       
         self.organization = organization
         self.eventType = eventType
         
+    }
+}
+class Owner:Decodable {
+     public var title:String
+    public var logoUrl:String?
+    public var link:String?
+    init(title:String,logoUrl:String,link:String) {
+        self.title = title
+        self.logoUrl = logoUrl
+        self.link = link
+    }
+}
+class Gallery: Decodable {
+    public var title:String
+    public var url:String
+    init(title:String,url:String) {
+        self.title = title
+        self.url = url
+    }
+}
+class Prize: Decodable {
+    public var type:String
+    public var value:String
+    init(type:String,value:String) {
+        self.type = type
+        self.value = value
+    }
+}
+class Skill:Decodable{
+    public var id: Int
+    public var tag:String
+    init(id:Int,tag:String) {
+        self.id = id
+        self.tag = tag
+    }
+}
+class Challenge: Decodable {
+    public var id: Int
+    public var title:String
+    public var description: String?
+    public var participants: Int
+    public var owners: [Owner]
+    init(id:Int,title:String,desc:String,part:Int,owners:[Owner]) {
+        self.id = id
+        self.title = title
+        self.description = desc
+        self.participants = part
+        self.owners = owners
     }
 }
 class Schedule:Decodable  {
@@ -63,3 +111,11 @@ class Schedule:Decodable  {
         self.time = time
     }
 }
+
+/*class HackInfo: Hackathon,Decodable {
+    
+    init(<#parameters#>) {
+        <#statements#>
+    }
+}*/
+
