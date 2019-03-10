@@ -8,35 +8,40 @@
 
 import Foundation
 
-
+enum Status {
+    case open
+    case applied
+    case confirmed
+    case declined
+    case activated
+    case participated
+    case won
+}
+/*enum EventType {
+    case h12(String)
+    case h24
+    case 36h
+    case 48h
+    case online
+    case custom
+}*/
 
 class Hackathon:Decodable {
     public var id: Int
     public var title:String
     public var submissionDue: String?
-    //public var description: String?
-    public var city:String?
-    public var dateStart:String?
-    public var dateEnd:String?
-    public var link:String?
-    public var eventType:String?
-    public var preview:String?
    
-   /* public enum status{
-        
-        case open
-        case applied
-        case confirmed
-        case verified
-        case activated
-        case participated
-        case won
-    }*/
-    public var status:String?
+    public var city:String?
+    public var dateStart:String
+    public var dateEnd:String
+    public var link:String?
+    public var eventType:String
+    public var preview:String?
+    public var status:String
     public var isSearchable:Bool?
-    public var organization: Organization
+    public var organization: Organization?
     
-    init(title: String,/*description: String,*/link: String,dateEnd: String,dateStart: String,city: String,preview:String,organization: Organization,
+    init(title: String,link: String,dateEnd: String,dateStart: String,city: String,preview:String,organization: Organization,
          eventType:String,id:Int,status:String, isSearchable:Bool,submissionDue: String) {
         self.title = title
        self.id = id
@@ -111,11 +116,62 @@ class Schedule:Decodable  {
         self.time = time
     }
 }
-
-/*class HackInfo: Hackathon,Decodable {
-    
-    init(<#parameters#>) {
-        <#statements#>
+class Partner:Decodable {
+    public var link: String?
+    public var title:String
+    public var logoUrl:String
+    public var type:String
+    init( title: String,logoUrl:String,type:String,link: String?) {
+        self.logoUrl = logoUrl
+        self.title = title
+        self.link = link
+        self.type = type
     }
-}*/
+}
+class Organizer:Decodable {
+    public var link: String?
+    public var title:String
+    public var logoUrl:String
+   
+    init( title: String,logoUrl:String,link: String?) {
+        self.logoUrl = logoUrl
+        self.title = title
+        self.link = link
+       
+    }
+}
+
+
+class HackInfo: Hackathon {
+    public var schedule:[Schedule]?
+    public var parthners:[Partner]?
+    public var organizers:[Organizer]?
+    public var skills:[Skill]?
+    public var prizes:[Prize]?
+    public var gallery :[Gallery]?
+    public var owners:[Owner]?
+    public var challenges:[Challenge]
+    public var judgingEnabled:Bool
+    public var p2pEnabled:Bool
+    public var judgingLink:String?
+    public var description:String?
+  
+     init(title: String,link: String,dateEnd: String,dateStart: String,city: String,preview:String,organization: Organization,
+         eventType:String,id:Int,status:String, isSearchable:Bool,submissionDue: String, schedule:[Schedule]?,parthners:[Partner]?,organizers:[Organizer]?,skills:[Skill]?,prizes:[Prize]?,gallery :[Gallery]?,owners:[Owner]?,challenges:[Challenge],judgingEnabled:Bool,p2pEnabled:Bool,judgingLink:String?,description:String?) {
+        self.schedule=schedule
+        self.parthners=parthners
+        self.organizers = organizers
+        self.skills=skills
+        self.prizes=prizes
+        self.gallery=gallery
+        self.owners=owners
+        self.challenges=challenges
+        self.judgingEnabled=judgingEnabled
+        self.p2pEnabled=p2pEnabled
+        self.judgingLink=judgingLink
+        self.description=description
+        
+        super.init(title: title, link: link, dateEnd: dateEnd, dateStart: dateStart, city: city, preview: preview, organization: organization, eventType: eventType, id: id, status: status, isSearchable: isSearchable, submissionDue: submissionDue)
+    }
+}
 

@@ -277,6 +277,9 @@ to get access:</string>
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="logInClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JDB-J2-0Jk"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>

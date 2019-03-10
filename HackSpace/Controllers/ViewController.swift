@@ -17,6 +17,12 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         return hackathones.count
     }
     
+    @IBAction func logInClick(_ sender: Any) {
+        self.performSegue(withIdentifier: "authSegue", sender:0)
+    }
+    
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
      
         
@@ -27,7 +33,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         let hack = hackathones[indexPath.row]
         //let dateObj = dateFormatter.date(from: (hack?.date as? Date)!)
         dateFormatter.dateFormat = "MM-dd-yyyy HH:mm"
-        cell.labelDate.text = String((hack.dateStart?.prefix(10))!)
+        cell.labelDate.text = String((hack.dateStart.prefix(10)))
        
         cell.labelTitle.text = hack.title
         if images.count>0{
@@ -137,7 +143,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "hackInfoSegue",let destination = segue.destination as? HackInfoController {
             if let index = sender as? Int {
-                destination.hack = hackathones[index]
+                destination.id = hackathones[index].id
                 destination.image = UIImage(data: images[index] as! Data)!;
             }
             
