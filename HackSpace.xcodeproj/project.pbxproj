@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E00FF1B223548BC00B45839 /* private.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E00FF1A223548BC00B45839 /* private.storyboard */; };
+		5E00FF1D2235615B00B45839 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E00FF1C2235615B00B45839 /* profile.png */; };
+		5E00FF232235646600B45839 /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E00FF222235646500B45839 /* line.png */; };
+		5E00FF26223564F500B45839 /* burger.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E00FF24223564F500B45839 /* burger.png */; };
+		5E00FF27223564F500B45839 /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E00FF25223564F500B45839 /* pencil.png */; };
+		5E00FF2E22356B7700B45839 /* go back.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E00FF2C22356B7600B45839 /* go back.png */; };
+		5E00FF2F22356B7700B45839 /* profile_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E00FF2D22356B7700B45839 /* profile_white.png */; };
 		760658622232AAAF00BE393A /* ChallengeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760658612232AAAF00BE393A /* ChallengeCell.swift */; };
 		76376BEB222FDB5600002BCF /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76376BEA222FDB5600002BCF /* AuthController.swift */; };
 		76376BED222FE5D300002BCF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76376BEC222FE5D300002BCF /* RegisterViewController.swift */; };
@@ -27,6 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E00FF1A223548BC00B45839 /* private.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = private.storyboard; path = Data/private.storyboard; sourceTree = "<group>"; };
+		5E00FF1C2235615B00B45839 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		5E00FF222235646500B45839 /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
+		5E00FF24223564F500B45839 /* burger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burger.png; sourceTree = "<group>"; };
+		5E00FF25223564F500B45839 /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil.png; sourceTree = "<group>"; };
+		5E00FF2C22356B7600B45839 /* go back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "go back.png"; path = "Images/go back.png"; sourceTree = "<group>"; };
+		5E00FF2D22356B7700B45839 /* profile_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profile_white.png; path = Images/profile_white.png; sourceTree = "<group>"; };
 		760658612232AAAF00BE393A /* ChallengeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeCell.swift; sourceTree = "<group>"; };
 		76376BEA222FDB5600002BCF /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		76376BEC222FE5D300002BCF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +107,9 @@
 				76487A7F221F34CD000361F1 /* Data */,
 				76487A47221DEB87000361F1 /* AppDelegate.swift */,
 				76487A4B221DEB87000361F1 /* Main.storyboard */,
+				5E00FF1A223548BC00B45839 /* private.storyboard */,
+				5E00FF2C22356B7600B45839 /* go back.png */,
+				5E00FF2D22356B7700B45839 /* profile_white.png */,
 				76487A51221DEB88000361F1 /* Assets.xcassets */,
 				76487A53221DEB88000361F1 /* LaunchScreen.storyboard */,
 				76487A56221DEB88000361F1 /* Info.plist */,
@@ -114,6 +131,10 @@
 		76487A82221F3A38000361F1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				5E00FF24223564F500B45839 /* burger.png */,
+				5E00FF25223564F500B45839 /* pencil.png */,
+				5E00FF222235646500B45839 /* line.png */,
+				5E00FF1C2235615B00B45839 /* profile.png */,
 				76487A87221F4119000361F1 /* hamb.png */,
 				76487A89221F42C4000361F1 /* hamb1.jpg */,
 				76487A83221F3A54000361F1 /* hackimage.jpg */,
@@ -190,13 +211,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E00FF27223564F500B45839 /* pencil.png in Resources */,
+				5E00FF2F22356B7700B45839 /* profile_white.png in Resources */,
 				76487A55221DEB88000361F1 /* LaunchScreen.storyboard in Resources */,
+				5E00FF232235646600B45839 /* line.png in Resources */,
 				76487A52221DEB88000361F1 /* Assets.xcassets in Resources */,
 				76487A84221F3A54000361F1 /* hackimage.jpg in Resources */,
 				76487A4D221DEB87000361F1 /* Main.storyboard in Resources */,
+				5E00FF26223564F500B45839 /* burger.png in Resources */,
+				5E00FF1D2235615B00B45839 /* profile.png in Resources */,
+				5E00FF1B223548BC00B45839 /* private.storyboard in Resources */,
 				76487A8A221F42C4000361F1 /* hamb1.jpg in Resources */,
 				76487A86221F3F28000361F1 /* Заметки in Resources */,
 				76487A88221F4119000361F1 /* hamb.png in Resources */,
+				5E00FF2E22356B7700B45839 /* go back.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
