@@ -14,6 +14,8 @@
 		5E00FF27223564F500B45839 /* pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E00FF25223564F500B45839 /* pencil.png */; };
 		5E00FF2E22356B7700B45839 /* go back.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E00FF2C22356B7600B45839 /* go back.png */; };
 		5E00FF2F22356B7700B45839 /* profile_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E00FF2D22356B7700B45839 /* profile_white.png */; };
+		5EEA71C82236E92F00DEADD6 /* OK.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EEA71C62236E92E00DEADD6 /* OK.png */; };
+		5EEA71C92236E92F00DEADD6 /* line_grey_horizontal.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EEA71C72236E92E00DEADD6 /* line_grey_horizontal.png */; };
 		760658622232AAAF00BE393A /* ChallengeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760658612232AAAF00BE393A /* ChallengeCell.swift */; };
 		76376BEB222FDB5600002BCF /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76376BEA222FDB5600002BCF /* AuthController.swift */; };
 		76376BED222FE5D300002BCF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76376BEC222FE5D300002BCF /* RegisterViewController.swift */; };
@@ -41,6 +43,8 @@
 		5E00FF25223564F500B45839 /* pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pencil.png; sourceTree = "<group>"; };
 		5E00FF2C22356B7600B45839 /* go back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "go back.png"; path = "Images/go back.png"; sourceTree = "<group>"; };
 		5E00FF2D22356B7700B45839 /* profile_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = profile_white.png; path = Images/profile_white.png; sourceTree = "<group>"; };
+		5EEA71C62236E92E00DEADD6 /* OK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = OK.png; path = Images/OK.png; sourceTree = "<group>"; };
+		5EEA71C72236E92E00DEADD6 /* line_grey_horizontal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = line_grey_horizontal.png; path = Images/line_grey_horizontal.png; sourceTree = "<group>"; };
 		760658612232AAAF00BE393A /* ChallengeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeCell.swift; sourceTree = "<group>"; };
 		76376BEA222FDB5600002BCF /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		76376BEC222FE5D300002BCF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 				76487A47221DEB87000361F1 /* AppDelegate.swift */,
 				76487A4B221DEB87000361F1 /* Main.storyboard */,
 				5E00FF1A223548BC00B45839 /* private.storyboard */,
+				5EEA71C72236E92E00DEADD6 /* line_grey_horizontal.png */,
+				5EEA71C62236E92E00DEADD6 /* OK.png */,
 				5E00FF2C22356B7600B45839 /* go back.png */,
 				5E00FF2D22356B7700B45839 /* profile_white.png */,
 				76487A51221DEB88000361F1 /* Assets.xcassets */,
@@ -213,9 +219,11 @@
 			files = (
 				5E00FF27223564F500B45839 /* pencil.png in Resources */,
 				5E00FF2F22356B7700B45839 /* profile_white.png in Resources */,
+				5EEA71C92236E92F00DEADD6 /* line_grey_horizontal.png in Resources */,
 				76487A55221DEB88000361F1 /* LaunchScreen.storyboard in Resources */,
 				5E00FF232235646600B45839 /* line.png in Resources */,
 				76487A52221DEB88000361F1 /* Assets.xcassets in Resources */,
+				5EEA71C82236E92F00DEADD6 /* OK.png in Resources */,
 				76487A84221F3A54000361F1 /* hackimage.jpg in Resources */,
 				76487A4D221DEB87000361F1 /* Main.storyboard in Resources */,
 				5E00FF26223564F500B45839 /* burger.png in Resources */,
