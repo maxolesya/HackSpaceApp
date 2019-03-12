@@ -577,7 +577,7 @@ to get access:</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NE9-s0-PDZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3772" y="-932"/>
+            <point key="canvasLocation" x="3951" y="-998"/>
         </scene>
         <!--Hack Info Controller-->
         <scene sceneID="Vv8-fj-1ar">

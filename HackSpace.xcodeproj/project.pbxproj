@@ -17,6 +17,7 @@
 		5EEA71C92236E92F00DEADD6 /* line_grey_horizontal.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EEA71C72236E92E00DEADD6 /* line_grey_horizontal.png */; };
 		5EEA71CB2236EAAA00DEADD6 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA71CA2236EAAA00DEADD6 /* ProfileController.swift */; };
 		5EEA71CD2236EB9C00DEADD6 /* AddSkillsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA71CC2236EB9C00DEADD6 /* AddSkillsController.swift */; };
+		5EEA71CF2237CD4800DEADD6 /* ViewController111.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA71CE2237CD4800DEADD6 /* ViewController111.swift */; };
 		760658622232AAAF00BE393A /* ChallengeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760658612232AAAF00BE393A /* ChallengeCell.swift */; };
 		76376BEB222FDB5600002BCF /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76376BEA222FDB5600002BCF /* AuthController.swift */; };
 		76376BED222FE5D300002BCF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76376BEC222FE5D300002BCF /* RegisterViewController.swift */; };
@@ -47,6 +48,7 @@
 		5EEA71C72236E92E00DEADD6 /* line_grey_horizontal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = line_grey_horizontal.png; path = Images/line_grey_horizontal.png; sourceTree = "<group>"; };
 		5EEA71CA2236EAAA00DEADD6 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		5EEA71CC2236EB9C00DEADD6 /* AddSkillsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillsController.swift; sourceTree = "<group>"; };
+		5EEA71CE2237CD4800DEADD6 /* ViewController111.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController111.swift; sourceTree = "<group>"; };
 		760658612232AAAF00BE393A /* ChallengeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeCell.swift; sourceTree = "<group>"; };
 		76376BEA222FDB5600002BCF /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		76376BEC222FE5D300002BCF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				76376BEC222FE5D300002BCF /* RegisterViewController.swift */,
 				5EEA71CA2236EAAA00DEADD6 /* ProfileController.swift */,
 				5EEA71CC2236EB9C00DEADD6 /* AddSkillsController.swift */,
+				5EEA71CE2237CD4800DEADD6 /* ViewController111.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				76376BEB222FDB5600002BCF /* AuthController.swift in Sources */,
 				76487A48221DEB87000361F1 /* AppDelegate.swift in Sources */,
 				76487A50221DEB87000361F1 /* HackSpace.xcdatamodeld in Sources */,
+				5EEA71CF2237CD4800DEADD6 /* ViewController111.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
