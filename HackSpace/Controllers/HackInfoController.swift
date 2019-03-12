@@ -28,17 +28,16 @@ class HackInfoController: UIViewController, UITableViewDataSource,UITableViewDel
         get_info(url: "https://facepalm.host/api/events/"+String(id!))
         
         super.viewDidLoad()
-        textViewDesc.text="Сегодня на нашей платформе стартовал чемпионат Telecom Data Cup совместно с компанией «МегаФон». Задача участников чемпионата — проанализировать массив данных и с помощью известных им методов машинного обучения предсказать, насколько абоненты удовлетворены качеством связи телеком-оператора."
-
-        // Do any additional setup after loading the view.
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if hack?.challenges == nil {return 0}
+        else{
+            return (hack?.challenges.count)!}
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "challengeCell", for: indexPath) as! ChallengeCell
-        
+        cell.buttonChallenge.setTitle(self.hack?.challenges[indexPath.row].title, for: .normal)
      
         return cell
     }
@@ -70,9 +69,19 @@ class HackInfoController: UIViewController, UITableViewDataSource,UITableViewDel
                 self.labelSubmissionDL.text = String((self.hack?.submissionDue?.prefix(10))!)
                 self.labelDates.text = String((self.hack?.dateStart.prefix(10))!) + " - " + String((self.hack?.dateEnd.prefix(10))!)
                 self.hackImageView.image = self.image
-                self.navigationItem.title = self.hack?.title}
+                self.navigationItem.title = self.hack?.title
+                 print((self.hack?.title)!)
+                print((self.hack?.organizers![0].title)!)
+               /* self.textViewDesc.text = self.hack?.description
+                self.view.addSubview(self.textViewDesc)
                
-                
+                var frame = self.textViewDesc.frame as CGRect;
+                frame.size.height = self.textViewDesc.contentSize.height;
+                self.textViewDesc.frame = frame;*/
+               self.textViewDesc.text = self.hack?.description
+                super.viewDidLoad()
+                self.tableView.reloadData()
+                }
             }
             catch{
                 print(error)

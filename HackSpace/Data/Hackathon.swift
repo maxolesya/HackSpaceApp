@@ -46,7 +46,7 @@ class Hackathon:Decodable {
         self.title = title
        self.id = id
         self.status = status
-        //self.description=description
+       
         self.link=link
         self.dateEnd=dateEnd
         self.dateStart=dateStart
@@ -142,7 +142,7 @@ class Organizer:Decodable {
 }
 
 
-class HackInfo: Hackathon {
+class HackInfo:  Decodable {
     public var schedule:[Schedule]?
     public var parthners:[Partner]?
     public var organizers:[Organizer]?
@@ -154,10 +154,27 @@ class HackInfo: Hackathon {
     public var judgingEnabled:Bool
     public var p2pEnabled:Bool
     public var judgingLink:String?
-    public var description:String?
-  
+    public var description:String
+    public var id: Int
+    public var title:String
+    public var submissionDue: String?
+    
+    public var city:String?
+    public var dateStart:String
+    public var dateEnd:String
+    public var link:String?
+    public var eventType:String
+    public var preview:String?
+    public var status:String
+    public var isSearchable:Bool?
+    public var organization: Organization?
+    /*func print ()->String {
+        if description != nil
+        { Swift.print(description!)}
+        return description! + " " + title
+    }*/
      init(title: String,link: String,dateEnd: String,dateStart: String,city: String,preview:String,organization: Organization,
-         eventType:String,id:Int,status:String, isSearchable:Bool,submissionDue: String, schedule:[Schedule]?,parthners:[Partner]?,organizers:[Organizer]?,skills:[Skill]?,prizes:[Prize]?,gallery :[Gallery]?,owners:[Owner]?,challenges:[Challenge],judgingEnabled:Bool,p2pEnabled:Bool,judgingLink:String?,description:String?) {
+          eventType:String,id:Int,status:String, isSearchable:Bool,submissionDue: String, schedule:[Schedule]?,parthners:[Partner]?,organizers:[Organizer]?,skills:[Skill]?,prizes:[Prize]?,gallery :[Gallery]?,owners:[Owner]?,challenges:[Challenge],judgingEnabled:Bool,p2pEnabled:Bool,judgingLink:String?,description:String?) {
         self.schedule=schedule
         self.parthners=parthners
         self.organizers = organizers
@@ -169,9 +186,22 @@ class HackInfo: Hackathon {
         self.judgingEnabled=judgingEnabled
         self.p2pEnabled=p2pEnabled
         self.judgingLink=judgingLink
-        self.description=description
+        self.description=description!
+        self.title = title
+        self.id = id
+        self.status = status
         
-        super.init(title: title, link: link, dateEnd: dateEnd, dateStart: dateStart, city: city, preview: preview, organization: organization, eventType: eventType, id: id, status: status, isSearchable: isSearchable, submissionDue: submissionDue)
+        self.link=link
+        self.dateEnd=dateEnd
+        self.dateStart=dateStart
+        self.city=city
+        self.preview=preview
+        self.isSearchable = isSearchable
+        self.submissionDue = submissionDue
+        
+        self.organization = organization
+        self.eventType = eventType
+        
     }
 }
 
