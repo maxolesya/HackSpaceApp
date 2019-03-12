@@ -52,11 +52,18 @@ class AuthController: UIViewController {
     }
     func auth(email: String,password:String) {
         var request = URLRequest(url: NSURL(string: "https://facepalm.host/api/login")! as URL)
-       
         request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue(email, forHTTPHeaderField: "email")
         request.addValue(password, forHTTPHeaderField: "pwd")
         var responseString = ""
+        var body: [String: AnyObject]
+        body = ["email": email as AnyObject, "pwd": password as AnyObject]
+        do{
+        let jsonBody = try JSONSerialization.data(withJSONObject: body, options: .prettyPrinted)
+        
+        request.httpBody = jsonBody
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
@@ -70,7 +77,9 @@ class AuthController: UIViewController {
             responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)! as String
             print("responseString = \(responseString)")
         }
-        task.resume()
+            task.resume()
+            
+        } catch{}
     }
     
     /*
