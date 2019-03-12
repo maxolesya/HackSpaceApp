@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KFi-kT-m8v">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Sns-VG-NeD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -139,7 +139,7 @@ to get access:</string>
                                 <rect key="frame" x="60" y="267" width="255" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -200,7 +200,7 @@ to get access:</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Zp-N0-Hoj">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuHacksSell" rowHeight="211" id="hjH-eg-tV1" customClass="MenuHacksCell" customModule="HackSpace" customModuleProvider="target">
@@ -272,7 +272,7 @@ to get access:</string>
                     </view>
                     <navigationItem key="navigationItem" title="Hackathones" id="sOj-yr-9JB">
                         <barButtonItem key="leftBarButtonItem" tag="-3" id="C0w-jt-Lw4"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="YB3-cQ-okC">
+                        <barButtonItem key="rightBarButtonItem" image="profile.png" style="plain" id="YB3-cQ-okC">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8Un-4v-zxu">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -291,7 +291,7 @@ to get access:</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+            <point key="canvasLocation" x="2015.2" y="133.5832083958021"/>
         </scene>
         <!--Hack Info Controller-->
         <scene sceneID="Vv8-fj-1ar">
@@ -524,12 +524,15 @@ to get access:</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="af3-xe-IpW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2573.5999999999999" y="200.59970014992504"/>
+            <point key="canvasLocation" x="4452" y="200.59970014992504"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--All Hacks-->
         <scene sceneID="hsn-qO-411">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KFi-kT-m8v" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="All Hacks" id="ubF-EJ-cnX">
+                        <color key="badgeColor" red="0.047649897634983063" green="0.023655097931623459" blue="0.010994675569236279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="nrT-U8-tem">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -542,10 +545,145 @@ to get access:</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hjd-kf-Kqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--My Hackathones-->
+        <scene sceneID="0aP-kt-Qi1">
+            <objects>
+                <viewController id="BcP-kA-rok" customClass="MyHacksController" customModule="HackSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cRQ-wx-bdb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="M2L-Sz-yeM">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="171" id="znw-gd-AOW" customClass="MyHacksCell" customModule="HackSpace" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="171"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="znw-gd-AOW" id="RH4-w2-HKV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="170.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hackimage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wZk-xO-ZPb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="170.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxE-cc-d24">
+                                                    <rect key="frame" x="15" y="11" width="338" height="53"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJG-89-nF9">
+                                                    <rect key="frame" x="18" y="64" width="338" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lJK-zK-MOJ">
+                                                    <rect key="frame" x="314" y="11" width="39" height="39"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yu2-bX-Daj">
+                                                    <rect key="frame" x="17" y="130" width="108" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.7852016715116279" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                    <state key="normal" title="I can't go">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wZk-xO-ZPb" firstAttribute="leading" secondItem="RH4-w2-HKV" secondAttribute="leading" id="1W1-HU-sJP"/>
+                                                <constraint firstAttribute="bottom" secondItem="wZk-xO-ZPb" secondAttribute="bottom" id="6y5-Lv-p8j"/>
+                                                <constraint firstAttribute="trailing" secondItem="wZk-xO-ZPb" secondAttribute="trailing" id="QcR-lD-mjU"/>
+                                                <constraint firstItem="wZk-xO-ZPb" firstAttribute="top" secondItem="RH4-w2-HKV" secondAttribute="top" id="nks-R3-jFa"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cantGoButton" destination="yu2-bX-Daj" id="HCh-B0-jAz"/>
+                                            <outlet property="cantGoClick" destination="yu2-bX-Daj" id="hzg-D9-2DY"/>
+                                            <outlet property="imageStar" destination="lJK-zK-MOJ" id="FIR-bO-vNV"/>
+                                            <outlet property="labelDate" destination="tJG-89-nF9" id="Avy-Mb-bTx"/>
+                                            <outlet property="labelTitle" destination="fxE-cc-d24" id="pwo-Iu-JMs"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BcP-kA-rok" id="T16-lv-pJE"/>
+                                    <outlet property="delegate" destination="BcP-kA-rok" id="6ug-MJ-I7W"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="M2L-Sz-yeM" firstAttribute="top" secondItem="r5R-hR-NEI" secondAttribute="top" id="5dH-MF-7SX"/>
+                            <constraint firstItem="M2L-Sz-yeM" firstAttribute="trailing" secondItem="r5R-hR-NEI" secondAttribute="trailing" id="NjX-Fq-S5L"/>
+                            <constraint firstItem="M2L-Sz-yeM" firstAttribute="leading" secondItem="r5R-hR-NEI" secondAttribute="leading" id="aPA-CR-0Ut"/>
+                            <constraint firstItem="M2L-Sz-yeM" firstAttribute="bottom" secondItem="r5R-hR-NEI" secondAttribute="bottom" id="jSL-oh-xAd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="r5R-hR-NEI"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Hackathones" id="Pfb-PN-uaS"/>
+                    <connections>
+                        <outlet property="tableView" destination="M2L-Sz-yeM" id="J8c-hZ-GZN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1gR-3O-Ieq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2015.2" y="934.18290854572717"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="QB3-AW-4Wf">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Sns-VG-NeD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UHR-sy-bZ7">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="KFi-kT-m8v" kind="relationship" relationship="viewControllers" id="jme-mZ-7hZ"/>
+                        <segue destination="KvP-lc-0RC" kind="relationship" relationship="viewControllers" id="nJ6-uq-YdT"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BpV-Ye-JZL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--My Hacks-->
+        <scene sceneID="Rel-Rc-0oN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KvP-lc-0RC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Hacks" id="1HQ-sd-dEI"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="b5E-af-IgA">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BcP-kA-rok" kind="relationship" relationship="rootViewController" id="rW5-qX-2QL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="teQ-fL-8Xa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="934.18290854572717"/>
         </scene>
     </scenes>
     <resources>
         <image name="hackimage.jpg" width="1920" height="1080"/>
+        <image name="profile.png" width="160" height="160"/>
     </resources>
 </document>

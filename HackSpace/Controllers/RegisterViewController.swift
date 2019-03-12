@@ -25,6 +25,33 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func signUpClick(_ sender: Any) {
+        if (textFieldEmail.text?.isEmpty)! || (textFieldPassword.text?.isEmpty)! || (textFieldName.text?.isEmpty)! {
+            let alert = UIAlertController(title: "Error", message:"Please, enter your name, email and password", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(defaultAction)
+            self.present(alert, animated: true, completion: nil)
+        }
+        else {
+            if !validateEmail(testStr:textFieldEmail.text!) {
+                let alert = UIAlertController(title: "The email is incorrect", message:"Please, enter your email correctly", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(defaultAction)
+                self.present(alert, animated: true, completion: nil)
+            }
+            else{
+                if (textFieldPassword.text?.count)! >= 8 {
+                    signUpPost(username: textFieldName.text!, email: textFieldEmail.text!, psw: textFieldPassword.text!)}
+                else {
+                    let alert = UIAlertController(title: "The password is too simple", message:"The password must contain at least 8 symbols", preferredStyle: .alert)
+                    let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    alert.addAction(defaultAction)
+                    self.present(alert, animated: true, completion: nil)
+                    
+                }
+                
+            }
+        
+        }
         
     }
     func validateEmail(testStr:String) -> Bool {
@@ -35,6 +62,61 @@ class RegisterViewController: UIViewController {
         return result
     }
     
+    func signUpPost(username:String,email:String,psw:String) {
+        var request = URLRequest(url: NSURL(string: "https://facepalm.host/api/hackers")! as URL)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        var body: [String: AnyObject]
+        body = ["username": username as AnyObject, "pwd": psw as AnyObject,"email":email as AnyObject]
+        do {
+            let jsonBody = try JSONSerialization.data(withJSONObject: body, options: .prettyPrinted)
+            
+            request.httpBody = jsonBody
+            
+            
+            let task = URLSession.shared.dataTask(with: request as URLRequest) {
+                data, response, error in
+                
+                if error != nil { // обработка ошибки при отправке
+                    
+                    print("error=\(String(describing: error))")
+                    
+                    return
+                    
+                }
+                
+                print("response = \(String(describing: response))")
+                
+                let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)! as String
+                
+                print("responseString = \(responseString)")
+                
+                if((responseString.contains("Bad")) ) {
+                    DispatchQueue.main.async {
+                        print("SMTH wrong")
+                        return}
+                    
+                    
+                }
+                if (responseString.contains("success")) {
+                    DispatchQueue.main.async {
+                        /*let alert = UIAlertController(title: NSLocalizedString("Thank you!", comment: "thanks"), message: NSLocalizedString("You voted successfully", comment: "successful voting"), preferredStyle: .alert)
+                        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                        alert.addAction(defaultAction)
+                        self.present(alert, animated: true, completion: nil)*/
+                        print("ok ___!!!!")
+                    }
+                    
+                }
+            }
+            task.resume()
+        }
+        catch{}
+        
+        
+        
+    }
     
 
     /*
